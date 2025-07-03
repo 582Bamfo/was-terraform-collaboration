@@ -1,8 +1,7 @@
 resource "aws_vpc" "collab-vpc" {
-  cidr_block       = "10.0.0.0/16"
-  instance_tenancy = "default"
+  cidr_block  = var.cidr_block
 
   tags = {
-    Name = "collab-vpc"
+    Name = "var.vpc_name"
   }
 }
